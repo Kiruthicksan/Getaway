@@ -15,25 +15,47 @@
 
 <body class="bg-light d-flex flex-column min-vh-100">
 
-    <header class="navbar-1">
-        <img class="brand" src="./assets/images/logo.png">
-        <div class="nav-icons">
-            <a href="#"><i class="fas fa-plane"></i><span>Flights</span></a>
-            <a href="#"><i class="fas fa-hotel"></i><span>Stays</span></a>
-            <a href="#"><i class="fas fa-route"></i><span>Road Trips</span></a>
-            <a href="#"><i class="fas fa-clock"></i><span></span>Last Minute</a>
-            <a href="#"><i class="fas fa-globe"></i><span></span>Explore</a>
-        </div>
-        <div class="nav-actions">
-            <div class="my-trips">
-                <i class="fas fa-suitcase-rolling"></i>
-                <span>My Trips</span>
+     <nav class="navbar navbar-expand-lg fixed-top modern-navbar" id="mainNavbar">
+    <div class="container-fluid py-2">
+        <a class="navbar-brand" href="#home">
+            <img class="brand-logo" src="./assets/images/logo.png" alt="Getaway Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-main-links">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tourPackages">Tour Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#whyChooseUs">Why Choose Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials-section">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#bookingForm">Book Your Trip</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Contact Us</a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center nav-action-group">
+                <a href="#" class="nav-link-action d-flex align-items-center me-3">
+                    <i class="fas fa-suitcase-rolling me-1"></i> My Trips
+                </a>
+                <button class="btn btn-primary login-signup-btn">
+                    <i class="fas fa-user-circle me-1"></i> Login / Signup
+                </button>
             </div>
-            <button class="login-btn">
-                <i class="fas fa-user-circle"></i> Login / Signup
-            </button>
         </div>
-    </header>
+    </div>
+</nav>
 
     <main class="flex-grow-1 d-flex align-items-center justify-content-center">
         <div class="container my-5">
