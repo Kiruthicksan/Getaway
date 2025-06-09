@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getaway</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top modern-navbar" id="mainNavbar">
+    <div class="container-fluid py-2">
+        <a class="navbar-brand" href="#home">
+            <img class="brand-logo" src="./assets/images/logo.png" alt="Getaway Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-main-links">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tourPackages">Tour Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#whyChooseUs">Why Choose Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials-section">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#bookingForm">Book Your Trip</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Contact Us</a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center nav-action-group">
+                <a href="#" class="nav-link-action d-flex align-items-center me-3">
+                    <i class="fas fa-suitcase-rolling me-1"></i> My Trips
+                </a>
+                <button class="btn btn-primary login-signup-btn">
+                    <i class="fas fa-user-circle me-1"></i> Login / Signup
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Unlock Your Next Great Escape.</h1>
+      <p>Seamlessly plan your dream vacation, from breathtaking peaks to serene shores.</p>
+      <button class="btn btn-primary btn-lg mt-3">Plan Your Trip</button>
+    </div>
+  </section>
+
+  <section class="tour-packages-section py-5" id="tourPackages">
+    <div class="container">
+      <h2 class="text-center mb-5">Explore Incredible India with Our Tour Packages</h2>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="./assets/images/package_1.jpg" class="card-img-top" alt="Golden Triangle Tour">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">The Golden Triangle Expedition</h5>
+              <p class="card-text">Discover the iconic wonders of Delhi, Agra, and Jaipur – a journey through India's
+                rich history and vibrant culture.</p>
+              <div class="mt-auto">
+                <p class="fw-bold fs-5 text-end text-primary">From ₹3499</p>
+                <a href="#" class="btn btn-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="./assets/images/package_2.jpg" class="card-img-top" alt="Kerala Backwaters Tour">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Serene Kerala Backwaters Cruise</h5>
+              <p class="card-text">Unwind amidst the tranquil backwaters of Kerala, houseboat stays, and lush green
+                landscapes of God's Own Country.</p>
+              <div class="mt-auto">
+                <p class="fw-bold fs-5 text-end text-primary">From ₹5500</p>
+                <a href="#" class="btn btn-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="./assets/images/package_3.jpg" class="card-img-top" alt="Rajasthan Desert Forts">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Royal Rajasthan: Forts & Deserts</h5>
+              <p class="card-text">Step back in time in the land of Maharajas. Explore magnificent forts, palaces, and
+                vibrant desert cities.</p>
+              <div class="mt-auto">
+                <p class="fw-bold fs-5 text-end text-primary">From ₹4950</p>
+                <a href="#" class="btn btn-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="./assets/images/package_4.jpg" class="card-img-top" alt="Goa Beaches">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Goa: Sun, Sand & Serenity</h5>
+              <p class="card-text">Experience the vibrant beaches, lively nightlife, and Portuguese charm of India's
+                favorite coastal paradise.</p>
+              <div class="mt-auto">
+                <p class="fw-bold fs-5 text-end text-primary">From ₹7000</p>
+                <a href="#" class="btn btn-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="./assets/images/package_5.jpg" class="card-img-top" alt="Spiritual Varanasi">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Spiritual Varanasi & Ganges</h5>
+              <p class="card-text">Discover the ancient spiritual heart of India. Witness sacred rituals along the
+                Ganges riverbanks.</p>
+              <div class="mt-auto">
+                <p class="fw-bold fs-5 text-end text-primary">From ₹14600</p>
+                <a href="#" class="btn btn-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="./assets/images/package_6.jpg" class="card-img-top" alt="North East Hidden Gems">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">North East: Hidden Himalayan Gems</h5>
+              <p class="card-text">Explore the untouched beauty of India's North East – lush hills, unique cultures, and
+                serene monasteries.</p>
+              <div class="mt-auto">
+                <p class="fw-bold fs-5 text-end text-primary">From ₹11000</p>
+                <a href="#" class="btn btn-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="container my-5" id="whyChooseUs">
+    <h3 class="text-center mb-4">Why Choose Getaway?</h3>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="feature-box p-4 shadow-sm h-100">
+          <i class="fas fa-star-half-stroke feature-icon mb-3"></i>
+          <h5>Expert Local Guides</h5>
+          <p>Explore with knowledgeable guides who bring destinations to life.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-box p-4 shadow-sm h-100">
+          <i class="fas fa-handshake feature-icon mb-3"></i>
+          <h5>Flexible & Tailored Trips</h5>
+          <p>Customize your itinerary to match your unique interests and pace.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-box p-4 shadow-sm h-100">
+          <i class="fas fa-headset feature-icon mb-3"></i>
+          <h5>24/7 Dedicated Support</h5>
+          <p>Peace of mind with our round-the-clock customer assistance.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-primary btn-lg">View All Our Packages</a>
+    </div>
+
+  </div>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section py-5 bg-white" id="testimonials-section">
+    <div class="container">
+      <h2 class="text-center mb-5">What Our Happy Travelers Say</h2>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Testimonial Card 1 -->
+        <div class="col">
+          <div class="testimonial-box p-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="star-rating mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-quote">"Getaway made my trip to the Golden Triangle absolutely seamless! The guides
+                were insightful and the arrangements flawless. Highly recommend!"</p>
+            </div>
+            <p class="testimonial-author mt-3">- Priya Sharma, Mumbai</p>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div class="col">
+          <div class="testimonial-box p-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="star-rating mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="testimonial-quote">"The Kerala Backwaters tour was a dream come true. Everything was perfectly
+                organized, and the experience was truly serene. Thank you, Getaway!"</p>
+            </div>
+            <p class="testimonial-author mt-3">- David Lee, New York</p>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 3 -->
+        <div class="col">
+          <div class="testimonial-box p-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="star-rating mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-quote">"Our Rajasthan trip was magnificent! The forts and palaces were breathtaking.
+                Getaway handled all the details, leaving us free to enjoy every moment."</p>
+            </div>
+            <p class="testimonial-author mt-3">- Sarah & John, London</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Booking Form Section -->
+<section class="booking-form-section py-5" id="bookingForm">
+    <div class="container">
+        <h2 class="text-center mb-5">Plan Your Dream Trip</h2>
+        <p class="text-center text-muted mb-4">Fill out the form below and let us handle the rest!</p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <form id="bookingForm" class="p-4 shadow-lg rounded-3 bg-white" novalidate>
+                    <div class="mb-3">
+                        <label for="travellerName" class="form-label">Traveller Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="travellerName" name="travellerName" placeholder="Full Name" required>
+                        <div class="invalid-feedback">
+                            Please enter your full name (letters and spaces only).
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dateOfTravel" class="form-label">Date of Travel <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="dateOfTravel" name="dateOfTravel" required>
+                        <div class="invalid-feedback">
+                            Please select a valid date of travel.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pickupLocation" class="form-label">Pickup Location <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="pickupLocation" name="pickupLocation" placeholder="e.g., Delhi Airport, Mumbai Central" required>
+                        <div class="invalid-feedback">
+                            Please enter your pickup location.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="destination" class="form-label">Destination <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="destination" name="destination" placeholder="e.g., Goa, Jaipur, Leh-Ladakh" required>
+                        <div class="invalid-feedback">
+                            Please enter your primary destination.
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Places to Visit -->
+                    <div class="mb-3" id="placesToVisitContainer">
+                        <label class="form-label d-block">Places to Visit <span class="text-danger">*</span></label>
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control places-to-visit-input" name="placesToVisit[]" placeholder="e.g., India Gate" required>
+                            <button class="btn btn-outline-secondary add-place-btn" type="button"><i class="fas fa-plus"></i> Add Another Place</button>
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter at least one place to visit.
+                        </div>
+                    </div>
+                    <!-- Error message for dynamic fields, initially hidden -->
+                    <div id="placesToVisitError" class="text-danger small ms-2" style="display: none;">
+                        Please ensure all dynamic 'Places to Visit' fields are filled.
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="numberOfPersons" class="form-label">Number of Persons <span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="numberOfPersons" name="numberOfPersons" min="1" placeholder="Minimum 1" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid number of persons (minimum 1).
+                        </div>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="termsAndConditions" name="termsAndConditions" required>
+                        <label class="form-check-label" for="termsAndConditions">I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a> <span class="text-danger">*</span></label>
+                        <div class="invalid-feedback">
+                            You must agree to the terms and conditions.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Terms and Conditions Modal -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>1. Booking Confirmation</h6>
+                <p>All bookings are subject to availability and confirmation. A booking is considered confirmed only after full payment is received and an official confirmation voucher is issued by Getaway.</p>
+
+                <h6>2. Payments</h6>
+                <p>Full payment is required at the time of booking for most packages. Special promotions or custom itineraries may have different payment schedules, which will be communicated at the time of quotation.</p>
+
+                <h6>3. Cancellations and Refunds</h6>
+                <p>Cancellation requests must be made in writing. Refund policies vary based on the package, time of cancellation, and specific vendor policies (airlines, hotels, etc.). A detailed cancellation policy will be provided with your booking confirmation.</p>
+
+                <h6>4. Changes to Booking</h6>
+                <p>Any changes to a confirmed booking are subject to availability and may incur additional charges. Getaway will make reasonable efforts to accommodate changes but cannot guarantee them.</p>
+
+                <h6>5. Travel Insurance</h6>
+                <p>We highly recommend that all travelers purchase comprehensive travel insurance to cover unforeseen circumstances such as trip cancellations, medical emergencies, lost luggage, etc. Getaway is not responsible for any costs incurred due to lack of adequate insurance.</p>
+
+                <h6>6. Passport and Visa Requirements</h6>
+                <p>It is the sole responsibility of the traveler to ensure they have a valid passport and all necessary visas, permits, and health certificates for their intended destinations. Getaway can provide general advice but is not responsible for any issues arising from incorrect or insufficient travel documentation.</p>
+
+                <h6>7. Health and Safety</h6>
+                <p>Travelers are responsible for assessing their own health and fitness for travel and for complying with all local health and safety regulations. Getaway prioritizes traveler safety but cannot be held liable for personal injury, loss, or damage.</p>
+
+                <h6>8. Limitation of Liability</h6>
+                <p>Getaway acts as an agent for various service providers (e.g., airlines, hotels, transport companies). While we strive to select reputable providers, Getaway is not liable for any acts, omissions, or failures of these third-party suppliers.</p>
+
+                <h6>9. Governing Law</h6>
+                <p>These terms and conditions are governed by and construed in accordance with the laws of India. Any disputes arising shall be subject to the exclusive jurisdiction of the courts in [Your City/Region in India, e.g., Delhi, Bangalore].</p>
+
+                <h6>10. Privacy Policy</h6>
+                <p>Your personal information collected during the booking process will be handled in accordance with our Privacy Policy, which is available on our website.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="agreeTermsButton">Agree & Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer class="footer-section py-5" id="footer">
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+                <img class="brand footer-brand mb-3" src="./assets/images/logo.png" alt="Getaway Logo">
+                <p class="text-light-50">Your passport to incredible journeys and unforgettable memories. Explore the world with Getaway.</p>
+                <p class="text-light-50 mt-3">&copy; 2024 Getaway. All rights reserved.</p>
+            </div>
+
+           
+            <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+                <h5 class="text-white mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-light-50 text-decoration-none py-1 d-block">Home</a></li>
+                    <li><a href="#tourPackages" class="text-light-50 text-decoration-none py-1 d-block">Tour Packages</a></li>
+                    <li><a href="#bookingForm" class="text-light-50 text-decoration-none py-1 d-block">Book Your Trip</a></li>
+                    <li><a href="#" class="text-light-50 text-decoration-none py-1 d-block">Privacy Policy</a></li>
+                    <li><a href="#" class="text-light-50 text-decoration-none py-1 d-block">Terms of Service</a></li>
+                </ul>
+            </div>
+
+          
+            <div class="col-md-4 text-center text-md-start">
+                <h5 class="text-white mb-3">Contact Us</h5>
+                <p class="text-light-50 mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Travel Lane, Adventure City, India</p>
+                <p class="text-light-50 mb-2"><i class="fas fa-phone-alt me-2"></i> +91 98765 43210</p>
+                <p class="text-light-50 mb-4"><i class="fas fa-envelope me-2"></i> info@getaway.com</p>
+
+                <div class="social-icons">
+                    <a href="#" class="text-light-50 me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-light-50 me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light-50 me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-light-50"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+  <script src="./assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

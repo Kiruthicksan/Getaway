@@ -1,0 +1,737 @@
+:root{
+
+   /* color pallete */
+
+     --primary-blue: #007BFF;
+      --primary-blue-dark: #1976D2;
+    --primary-orange: #ff6f61;
+    --text-dark: #333;
+    --text-medium: #555;
+    --text-light: #444;
+    --background-light: #f4f7f6;
+    --background-white: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+
+    /* Giving global spacing so it easy to change the spacing later */
+
+    --spacing-xs: 0.25rem; /* ~4px */
+    --spacing-sm: 0.5rem;  /* ~8px */
+    --spacing-md: 1rem;    /* ~16px */
+    --spacing-lg: 1.5rem;  /* ~24px */
+    --spacing-xl: 2rem;    /* ~32px */
+    --spacing-xxl: 5rem;   /* ~80px */
+
+    /* Same for font size. Just for ease use */
+
+     --font-size-sm: 0.85rem;
+    --font-size-md: 0.95rem;
+    --font-size-lg: 1.3rem;
+    --font-size-xl: 1.8rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins' , sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+}
+
+/* Navbar */
+
+
+
+.modern-navbar {
+    background-color: var(--background-white);
+    box-shadow: var(--shadow-light);
+    z-index: 1000;
+    height: 75px; 
+    transition: all var(--transition-medium);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.modern-navbar .container-fluid {
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    
+    padding: 10px var(--spacing-lg); 
+}
+
+
+/* Navbar Brand/Logo */
+.modern-navbar .navbar-brand {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.modern-navbar .brand-logo { 
+    height: 150px; 
+    width: auto;
+    object-fit: contain;
+    transition: height var(--transition-medium);
+}
+
+/* Navbar Toggler (Hamburger Icon) */
+.modern-navbar .navbar-toggler {
+    border: none; 
+    padding: var(--spacing-xs); 
+    transition: background-color var(--transition-fast);
+}
+
+.modern-navbar .navbar-toggler:focus {
+    box-shadow: none; 
+}
+
+
+/* Main Navigation Links (Home, Tour Packages, etc.) */
+.modern-navbar .nav-main-links {
+    margin-right: var(--spacing-xxl); 
+    gap: var(--spacing-lg); 
+}
+
+.modern-navbar .nav-main-links .nav-item {
+    padding: 0; 
+}
+
+.modern-navbar .nav-main-links .nav-link {
+    color: var(--text-dark); 
+    font-family: var(--font-family-heading); 
+    font-size: var(--font-size-sm);
+    font-weight: 600; 
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: var(--spacing-xs) 0; 
+    transition: color var(--transition-fast);
+}
+
+.modern-navbar .nav-main-links .nav-link:hover {
+    color: var(--primary-blue); 
+}
+
+/* Underline effect for main links on hover */
+.modern-navbar .nav-main-links .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-blue);
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform var(--transition-fast);
+}
+
+.modern-navbar .nav-main-links .nav-link:hover::after {
+    transform: scaleX(1); 
+    transform-origin: bottom left;
+}
+
+.modern-navbar .nav-main-links .nav-link i {
+    font-size: var(--font-size-md);
+    margin-right: var(--spacing-xxs); 
+}
+
+
+.modern-navbar .nav-action-group {
+    gap: var(--spacing-md); 
+}
+
+.modern-navbar .nav-link-action { 
+    color: var(--text-medium); 
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.modern-navbar .nav-link-action:hover {
+    color: var(--primary-blue); 
+}
+
+.modern-navbar .nav-link-action i {
+    font-size: var(--font-size-md);
+    margin-right: var(--spacing-xxs);
+}
+
+/* Login/Signup Button */
+.modern-navbar .login-signup-btn {
+    background-color: var(--primary-blue); 
+    color: var(--background-white);
+    border: none;
+    border-radius: 10px; 
+    padding: var(--spacing-sm) var(--spacing-lg); 
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all var(--transition-medium);
+    box-shadow: var(--shadow-light); 
+}
+
+.modern-navbar .login-signup-btn:hover {
+    background-color: var(--primary-blue-dark); 
+    transform: translateY(-2px); 
+    box-shadow: var(--shadow-medium);
+    color: var(--background-white);
+}
+
+.modern-navbar .login-signup-btn i {
+    font-size: var(--font-size-md);
+    margin-right: var(--spacing-xs);
+}
+
+/* Navbar Scroll Effect (when .scrolled class is active) */
+.modern-navbar.scrolled {
+    min-height: 60px; 
+    padding-top: var(--spacing-xs); 
+    padding-bottom: var(--spacing-xs);
+    background-color: rgba(255, 255, 255, 0.98); 
+    box-shadow: var(--shadow-medium); 
+}
+
+.modern-navbar.scrolled .brand-logo {
+    height: 45px; 
+}
+
+.modern-navbar.scrolled .nav-main-links .nav-link,
+.modern-navbar.scrolled .nav-link-action {
+    font-size: var(--font-size-xs); 
+}
+
+.modern-navbar.scrolled .nav-main-links .nav-link i,
+.modern-navbar.scrolled .nav-link-action i {
+    font-size: var(--font-size-sm); 
+}
+
+.modern-navbar.scrolled .login-signup-btn {
+    padding: var(--spacing-xs) var(--spacing-md); 
+    font-size: var(--font-size-xs);
+}
+
+.modern-navbar.scrolled .login-signup-btn i {
+    font-size: var(--font-size-sm);
+}
+
+
+
+@media (max-width: 991.98px) { 
+    .modern-navbar .navbar-collapse {
+        background-color: var(--background-white); 
+        border-top: 1px solid var(--border-color); 
+        padding: var(--spacing-md);
+        margin-top: var(--spacing-xs); 
+        box-shadow: var(--shadow-medium); 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        overflow-y: auto; 
+    }
+
+    .modern-navbar .nav-main-links,
+    .modern-navbar .nav-action-group {
+        flex-direction: column; 
+        align-items: flex-start; 
+        width: 100%;
+        gap: var(--spacing-sm); 
+        padding-top: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .modern-navbar .nav-main-links .nav-item,
+    .modern-navbar .nav-action-group a,
+    .modern-navbar .nav-action-group button {
+        width: 100%; 
+        text-align: left;
+    }
+
+    .modern-navbar .nav-main-links .nav-link::after {
+        display: none; 
+    }
+
+    .modern-navbar .login-signup-btn {
+        width: auto;
+        align-self: flex-start; 
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    .modern-navbar.scrolled .navbar-collapse {
+        background-color: var(--background-white); 
+    }
+}
+
+
+/* Hero Section */
+
+.hero-section{
+    margin-top: 75px;
+    position: relative;
+    height: calc(100vh - 75px);
+    background-image: url('../images/Hero_1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-white);
+    text-align: center;
+
+}
+
+.hero-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: var(--spacing-md);
+}
+
+.hero-content h1 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    animation: fadeInDown 1s ease-out; 
+}
+
+.hero-content p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+    animation: fadeInUp 1s ease-out 0.3s; 
+}
+
+.hero-content .btn {
+    background-color: var(--primary-orange); 
+    border-color: var(--primary-orange);
+    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    animation: zoomIn 1s ease-out 0.6s; 
+}
+
+.hero-content .btn:hover {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+/* Information Section - Tour Packages */
+
+.tour-packages-section {
+    background-color: var(--background-light);
+    padding-top: var(--spacing-xxl); 
+    padding-bottom: var(--spacing-xxl);
+}
+
+.tour-packages-section h2 {
+    color: var(--text-dark);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+}
+
+.card {
+    border: none; 
+    border-radius: 0.75rem; 
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px var(--shadow-light); 
+}
+
+.card-img-top {
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.card-body {
+    padding: var(--spacing-lg);
+}
+
+.card-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.card-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-medium);
+    margin-bottom: var(--spacing-md);
+}
+
+.card .btn {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #0056b3; 
+    border-color: #0056b3;
+}
+
+
+.card .text-primary {
+    color: var(--primary-blue) !important; 
+}
+
+
+.card .fs-5 {
+    color: var(--primary-orange) !important; 
+}
+
+/* Why Choose Us Section */
+.feature-box {
+    background-color: var(--background-white);
+    border-radius: 0.75rem;
+   
+}
+
+
+
+.feature-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px var(--shadow-light);
+}
+
+
+.feature-icon {
+    font-size: 2.5rem; 
+    color: var(--primary-orange); 
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-box h5 {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-box p {
+    font-size: var(--font-size-sm);
+    color: var(--text-medium);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--background-light); /* Or var(--background-white) for contrast */
+    padding-top: var(--spacing-xxl);
+    padding-bottom: var(--spacing-xxl);
+}
+
+.testimonials-section h2 {
+    color: var(--text-dark);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+}
+
+.testimonial-box {
+    background-color: var(--background-white);
+    border-radius: 0.75rem;
+    padding: var(--spacing-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow-light);
+}
+
+.testimonial-quote {
+    font-size: var(--font-size-md);
+    font-style: italic;
+    color: var(--text-medium);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--primary-blue); 
+    text-align: right; /
+}
+
+.star-rating {
+    color: var(--primary-orange); 
+    font-size: var(--font-size-md);
+}
+
+.star-rating i {
+    margin-right: 2px; /
+}
+
+/* Booking Form Section */
+.booking-form-section {
+    background-color: var(--background-light);
+    padding-top: var(--spacing-xxl);
+    padding-bottom: var(--spacing-xxl);
+}
+
+.booking-form-section h2 {
+    color: var(--text-dark);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+}
+
+.booking-form-section .form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Style for the form container */
+#bookingForm {
+    border: none;
+    border-radius: 0.75rem;
+    padding: var(--spacing-xl) !important; 
+}
+
+/* Button styles for the form */
+#bookingForm .btn-primary {
+    background-color: var(--primary-orange); 
+    border-color: var(--primary-orange);
+    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#bookingForm .btn-primary:hover {
+    background-color: var(--primary-blue); 
+    border-color: var(--primary-blue);
+}
+
+/* Style for the "Add Another Place" button */
+
+.add-place-btn {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.add-place-btn:hover {
+    background-color: var(--primary-blue);
+    color: var(--background-white);
+}
+
+
+.form-control:invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+
+
+/* Success Page Specific Styles */
+body {
+    background-color: var(--background-light); 
+}
+
+.success-card {
+    background-color: var(--background-white);
+    border: none;
+    border-radius: 1rem; 
+    padding: var(--spacing-xxl) !important;
+    max-width: 700px;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.success-icon {
+    font-size: 4rem; 
+    color: var(--primary-blue); 
+}
+
+.success-card h1 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.success-card .lead {
+    font-size: var(--font-size-lg);
+    color: var(--text-medium);
+}
+
+.booking-summary {
+    width: 100%; 
+    max-width: 500px; 
+}
+
+.booking-summary h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.booking-summary .list-group-item {
+    background-color: transparent; 
+    border-color: #eee; 
+    font-size: var(--font-size-md);
+    color: var(--text-dark);
+    padding-left: 0; 
+    padding-right: 0;
+}
+
+.booking-summary .list-group-item strong {
+    color: var(--text-medium);
+    margin-right: var(--spacing-sm);
+}
+
+.booking-summary .list-unstyled li {
+    font-size: var(--font-size-md);
+    color: var(--text-dark);
+    padding-left: var(--spacing-sm); 
+}
+
+.success-card .btn-primary {
+    background-color: var(--primary-orange); 
+    border-color: var(--primary-orange);
+    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.success-card .btn-primary:hover {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+
+
+/* Footer Section */
+.footer-section {
+    background-color: var(--text-dark); 
+    color: var(--background-white);
+    padding-top: var(--spacing-xxl);
+    padding-bottom: var(--spacing-xxl);
+}
+
+.footer-section .footer-brand {
+    height: 120px; 
+    width: auto;
+    object-fit: contain;
+    filter: brightness(2); 
+}
+
+.footer-section h5 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-section p {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
+.footer-section .text-light-50 {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-section .list-unstyled li a {
+    transition: color 0.3s ease;
+    font-size: var(--font-size-md);
+}
+
+.footer-section .list-unstyled li a:hover {
+    color: var(--primary-blue) !important;
+}
+
+.footer-section .social-icons a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section .social-icons a:hover {
+    color: var(--primary-blue) !important; 
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    .footer-section .text-md-start {
+        text-align: center !important; 
+    }
+
+    .footer-section .footer-brand {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-section .social-icons {
+        margin-top: var(--spacing-md);
+    }
+}
+
+
+
+
+
+
+
+
